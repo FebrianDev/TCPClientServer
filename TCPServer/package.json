@@ -1,0 +1,19 @@
+{
+  "name": "multipleclient",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Febrian",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.17.1",
+    "net": "^1.0.2",
+    "nodemon": "^2.0.7",
+    "socket.io": "^4.1.2",
+    "socket.io-client": "^4.1.2"
+  }
+}

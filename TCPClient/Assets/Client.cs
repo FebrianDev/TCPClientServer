@@ -8,33 +8,31 @@ using Random = UnityEngine.Random;
 
 public class Client : MonoBehaviour
 {
-    #region private members
+    private TcpClient _connection; // Object yang menyediakan koneksi ke tcp server
+    
+    private Thread _clientReceiveThread; // Object untuk menjalankan thread secara terpisah dari thread utama
 
-    private TcpClient _connection;
-    private Thread _clientReceiveThread;
-
-    #endregion
-
-    [SerializeField] private GameObject msgParent;
-    [SerializeField] private InputField inputField;
+    [SerializeField] private GameObject msgParent; // gameobject untuk menampung prefab message
+    [SerializeField] private InputField inputField; // komponen untuk menyimpan inputfield
 
     private float i = 0;
-    private int _idClient;
+    private int _idClient; // variable untuk menyimpan idClient
 
-    private string _data;
-    private bool _add = false;
+    private string _data; // variable untuk menyimpan data yang dikirim oleh tcp server
+    private bool _add = false; // variable untuk mengecek apakah ada data baru atau tidak yang berasal dari server
     private void Start()
     {
-        _idClient = Random.Range(1, 100000);
-        ConnectToTcpServer();
+        _idClient = Random.Range(1, 100000); // random id client 1 - 100000
+        ConnectToTcpServer(); // method connect to tcp server
     }
 
     private void Update()
     {
         if(_data != null)
-            InstantiateMessage(_data, i);
+            InstantiateMessage(_data, i); // method untuk menambahkan pesan baru ke panel unity
     }
 
+    //method yang dijalankan di komponen button untuk mengirim data ke server
     public void BtnSend()
     {
         SendMessage();
@@ -45,6 +43,7 @@ public class Client : MonoBehaviour
     {
         try
         {
+            //jalankan thread terpisah untuk koneksi ke server yang berjalan di background 
             _clientReceiveThread = new Thread(ListenForData) {IsBackground = true};
             _clientReceiveThread.Start();
         }
@@ -60,7 +59,7 @@ public class Client : MonoBehaviour
         try
         {
             _connection = new TcpClient("127.0.0.1", 3000); // connect to host & port server
-            var bytes = new byte[1024];
+            var bytes = new byte[1024]; 
             while (true)
             {
                 // Get a stream object for reading 				

@@ -1,6 +1,6 @@
 # TCPClientServer
-This project is a realtime chat simulation using Nodejs as server and C# Unity as client with TCP Protocol  
-## Instalation
+This project is a realtime chat simulation using Nodejs as server and C# Unity as client with TCP Protocol
+## How to Run
 **Open your git terminal and clone this repo**
 
  ```bash
@@ -17,6 +17,12 @@ Server will always run, if you want to turn off press **Ctrl + C**
 **Run Client**
 * Open folder **TCPClient**
 * Open folder **Build**
-* Double click **TCPCleint.exe**
+* Double click **TCPClient.exe**
 
 Client can only run if the server is active, if the server is down the client cannot send messages
+
+## Result
+When Server Running & Client Communication
+
+![result](https://raw.githubusercontent.com/FebrianDev/TCPClientServer/main/result.png)
+

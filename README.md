@@ -1,6 +1,13 @@
 # TCPClientServer
 This project is a realtime chat simulation using Nodejs as server and C# Unity as client with TCP Protocol
+
+## Prerequisites
+Download **[npm](https://www.npmjs.com/package/download) & [nodejs](https://nodejs.dev/download)**
+
 ## How to Run
+
+Before continue please the complete [prerequisites](#prerequisites)
+
 **Open your git terminal and clone this repo**
 
  ```bash

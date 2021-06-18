@@ -33,3 +33,10 @@ When Server Running & Client Communication
 
 ![result](https://raw.githubusercontent.com/FebrianDev/TCPClientServer/main/result.png)
 
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## Contact
+M. Dwi Febrian - febrian26022001@gmail.com
+
+

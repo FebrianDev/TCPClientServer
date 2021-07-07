@@ -1,6 +1,14 @@
 # TCPClientServer
 This project is a realtime chat simulation using Nodejs as server and C# Unity as client with TCP Protocol
 
+## Work Flow
+1. Server running
+2. Client running and connect to server
+3. Client input message/data and send it to server
+4. Server broadcasts the data to all client
+5. Client receives the data sent by the server
+6. All data logs are recorded by Server and saved into .txt
+
 ## Prerequisites
 Download **[npm](https://www.npmjs.com/package/download) & [nodejs](https://nodejs.dev/download)**
 

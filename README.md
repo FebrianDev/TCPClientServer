@@ -17,7 +17,7 @@ This project is a realtime chat simulation using Nodejs as server and C# Unity a
 4. Client prints data received from server
 
 ## Flowchart
-![Flowchart](https://raw.githubusercontent.com/FebrianDev/TCPClientServer/main/Flowchart2.png)
+![Flowchart](https://github.com/FebrianDev/TCPClientServer/blob/main/Flowchart2.jpg)
 
 ## Prerequisites
 Download **[npm](https://www.npmjs.com/package/download) & [nodejs](https://nodejs.dev/download)**

@@ -1,13 +1,20 @@
 # TCPClientServer
 This project is a realtime chat simulation using Nodejs as server and C# Unity as client with TCP Protocol
 
-## Work Flow
+## Work Flow Server
 1. Server running
-2. Client running and connect to server
-3. Client input message/data and send it to server
-4. Server broadcasts the data to all client
-5. Client receives the data sent by the server
-6. All data logs are recorded by Server and saved into .txt
+2. Server waiting client for join
+3. Server accept client for join
+4. Server stored client in array
+5. Server received data from client and stored data in array
+6. Server broadcast data from client to all client
+7. If server shutdown, destroy all client in array and save data message in array to txt
+
+## Work Flow Client
+1. Client join to server
+2. Client send data message to server
+3. Client received data from server
+4. Client prints data received from server
 
 ## Flowchart
 ![Flowchart](https://raw.githubusercontent.com/FebrianDev/TCPClientServer/main/Flowchart.png)
